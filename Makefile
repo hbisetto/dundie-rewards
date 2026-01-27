@@ -1,4 +1,4 @@
-.PHONY: install virtualenv ipython clean ## Para não criar arquivos extras desnecessários
+.PHONY: install virtualenv ipython clean test ## Para não criar arquivos extras desnecessários
 
 install:
 	@echo "Installing for dev environment"
@@ -11,6 +11,12 @@ virtualenv:
 ipython:
 	@echo "Openning the ipython usign the .venv"
 	@.venv/bin/ipython 
+
+test:
+	@.venv/bin/pytest -vv -s tests/
+
+watch:
+	@.venv/bin/ptw -- -vv tests/
 
 clean: ## Clean unused files
 	@find ./ -name '*.pyc' -exec rm -f {} \;
