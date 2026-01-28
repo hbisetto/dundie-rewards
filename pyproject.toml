@@ -1,0 +1,8 @@
+# pytest.toml or .pytest.toml
+[pytest]
+minversion = "9.0"
+addopts = ["-ra", "-q", "-vv"]
+testpaths = [
+    "tests",
+    "integration",
+]

@@ -1,8 +1,8 @@
-.PHONY: install virtualenv ipython clean test ## Para não criar arquivos extras desnecessários
+.PHONY: install virtualenv ipython clean test watch## Para não criar arquivos extras desnecessários
 
 install:
 	@echo "Installing for dev environment"
-	@.venv/bin/python -m pip install -e ".[dev]"
+	@.venv/bin/python3 -m pip install -e ".[dev]"
 
 virtualenv:
 	@echo "Creating a virtualenv"
