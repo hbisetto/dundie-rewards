@@ -29,6 +29,7 @@ setup(
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
     author="Henrique Bisetto",
+    python_requires=">=3.8",
     packages=find_packages(),
     entry_points={
         "console_scripts": [
@@ -36,7 +37,7 @@ setup(
         ]
     },
     install_requires=read_requirements("requirements.txt"),
-    extras_requires={
+    extras_require={
         "test": read_requirements("requirements.test.txt"),
         "dev":read_requirements("requirements.dev.txt")
     }

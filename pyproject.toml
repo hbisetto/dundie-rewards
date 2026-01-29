@@ -2,7 +2,4 @@
 [pytest]
 minversion = "9.0"
 addopts = ["-ra", "-q", "-vv"]
-testpaths = [
-    "tests",
-    "integration",
-]
+testpaths = ["tests","integration"]
