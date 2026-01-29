@@ -13,10 +13,12 @@ ipython:
 	@.venv/bin/ipython 
 
 test:
-	@.venv/bin/pytest -vv -s tests/
+	@.venv/bin/pytest -vv -s 
 
 watch:
-	@.venv/bin/ptw -- -vv tests/
+	# @.venv/bin/ptw -- -vv -s 
+	# também pode ser feito da maneira abaixo
+	@ls **/*.py | entr pytest
 
 clean: ## Clean unused files
 	@find ./ -name '*.pyc' -exec rm -f {} \;
