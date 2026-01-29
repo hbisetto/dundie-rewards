@@ -37,7 +37,7 @@ setup(
         ]
     },
     install_requires=read_requirements("requirements.txt"),
-    extras_requires={
+    extras_require={
         "test": read_requirements("requirements.test.txt"),
         "dev":read_requirements("requirements.dev.txt")
     }
