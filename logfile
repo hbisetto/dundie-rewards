@@ -1,0 +1,4 @@
+2026-02-03 17:13:17,972  dundie  ERROR l:23 f:core.py: [Errno 2] No such file or directory: 'tests/assets/people.csv'
+2026-02-03 17:13:18,075  dundie  ERROR l:23 f:core.py: [Errno 2] No such file or directory: 'tests/assets/people.csv'
+2026-02-03 17:17:12,069  dundie  ERROR l:23 f:core.py: [Errno 2] No such file or directory: '/assets/people.csv'
+2026-02-03 17:17:12,183  dundie  ERROR l:23 f:core.py: [Errno 2] No such file or directory: '/assets/people.csv'
