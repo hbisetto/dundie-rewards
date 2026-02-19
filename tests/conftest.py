@@ -17,4 +17,5 @@ def pytest_configure(config):
 def go_to_tmpdir(request): # injeção de dependências
     tmpdir = request.getfixturevalue("tmpdir")
     with tmpdir.as_cwd():
-        yield # faz o que tem que fazer, e retorna a função
+        yield # Protocolo de generators
+        

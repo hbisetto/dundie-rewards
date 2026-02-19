@@ -1,5 +1,10 @@
 # pytest.toml or .pytest.toml
-[pytest]
+[tool.pytest.ini_options]
 minversion = "9.0"
 addopts = ["-ra", "-q", "-vv"]
 testpaths = ["tests","integration"]
+
+[tool.flake8]
+exclude= [".venv", "build"]
+max-line-length = 79
+
