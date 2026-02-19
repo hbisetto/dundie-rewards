@@ -28,6 +28,7 @@ jobs:
       - name: Install Project    
         run: |
           python -m pip install --upgrade pip
+          python -m pip uninstall -y pytest
           pip install --upgrade '.[test]'
       - name: Run tests
         run: make testci    
@@ -37,4 +38,3 @@ jobs:
         with:
           files: test.result.xml
           check_name: Test Result (Python ${{matrix.python-version}}))
-          
