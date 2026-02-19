@@ -26,7 +26,7 @@ jobs:
         with:
           python-version: ${{matrix.python-version}}
       - name: Install Project    
-        run: 
+        run: |
           python -m pip install --upgrade pip
           pip install --upgrade '.[test]'
       - name: Run tests
