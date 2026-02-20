@@ -1,4 +1,4 @@
-.PHONY: install virtualenv ipython clean test watch## Para não criar arquivos extras desnecessários
+.PHONY: install virtualenv ipython clean test watch pflake8## Para não criar arquivos extras desnecessários
 
 install:
 	@echo "Installing for dev environment"
@@ -12,8 +12,14 @@ ipython:
 	@echo "Openning the ipython usign the .venv"
 	@.venv/bin/ipython 
 
+lint:
+	@.venv/bin/pflake8
+
 test:
 	@.venv/bin/pytest -vv -s 
+
+testci:
+	@.venv/bin/pytest -v --junitxml=test-result.xml
 
 watch:
 	# @.venv/bin/ptw -- -vv -s 
