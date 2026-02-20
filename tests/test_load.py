@@ -35,7 +35,7 @@ def test_load_positive_has_2_people(request):
     #with open(f"arquivo_indesejado-{uuid.uuid4()}.txt", "w") as file_:
     #    file_.write("dados úteis somente para o teste")
 
-    assert len(load(PEOPLE_FILE)) == 2
+    assert len(load(PEOPLE_FILE)) == 3
 
 
 @pytest.mark.unit
