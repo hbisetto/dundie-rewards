@@ -16,7 +16,7 @@ lint:
 	@.venv/bin/pflake8
 
 test:
-	@.venv/bin/pytest -vv -s 
+	@.venv/bin/pytest -vv -s  
 
 testci:
 	@.venv/bin/pytest -v --junitxml=test-result.xml
