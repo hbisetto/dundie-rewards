@@ -21,9 +21,6 @@ test:
 testci:
 	@.venv/bin/pytest -v --junitxml=test-result.xml
 
-testci:
-	@.venv/bin/pytest -v --junitxml=test-result.xml
-
 watch:
 	# @.venv/bin/ptw -- -vv -s 
 	# também pode ser feito da maneira abaixo
