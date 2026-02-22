@@ -1,5 +1,7 @@
 import argparse
-from dundie.core import load # funcionaria como from .core import load 
+
+from dundie.core import load  # noqa
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -7,20 +9,19 @@ def main():
         epilog="Enjoy and use with caution.",
     )
     parser.add_argument(
-        "subcommand", 
+        "subcommand",
         type=str,
         help="The subcommand to run",
         choices=("load", "show", "send"),
-        default=help
+        default=help,
     )
     parser.add_argument(
         "filepath",
         type=str,
         help="File path to load",
-        default=None
+        default=None,
     )
 
     args = parser.parse_args()
-    
-    print(*globals()[args.subcommand](args.filepath))   
-    
+
+    print(*globals()[args.subcommand](args.filepath))

@@ -1,7 +1,9 @@
-import uuid
+# import uuid
 import pytest
-import os
+
+# import os
 from dundie.core import load
+
 from .constants import PEOPLE_FILE
 
 """def setup_module():
@@ -23,16 +25,17 @@ def create_new_file(tmpdir):
     file_.remove()
 """
 
+
 @pytest.mark.unit
 @pytest.mark.high
 def test_load_positive_has_2_people(request):
     """Test load function"""
 
-    #filepath = f"arquivo_indesejado-{uuid.uuid4()}.txt"
-    #request.addfinalizer(lambda: os.unlink(filepath))
+    # filepath = f"arquivo_indesejado-{uuid.uuid4()}.txt"
+    # request.addfinalizer(lambda: os.unlink(filepath))
     # request.addfinalizer(lambda: print("Terminou"))
 
-    #with open(f"arquivo_indesejado-{uuid.uuid4()}.txt", "w") as file_:
+    # with open(f"arquivo_indesejado-{uuid.uuid4()}.txt", "w") as file_:
     #    file_.write("dados úteis somente para o teste")
 
     assert len(load(PEOPLE_FILE)) == 3
@@ -42,6 +45,4 @@ def test_load_positive_has_2_people(request):
 @pytest.mark.high
 def test_load_positive_has_first_name_starts_with_j(request):
     """Test load function"""
-    assert load(PEOPLE_FILE)[0][0] == 'J'
-
-
+    assert load(PEOPLE_FILE)[0][0] == "J"
