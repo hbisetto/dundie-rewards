@@ -10,19 +10,23 @@ virtualenv:
 
 ipython:
 	@echo "Openning the ipython usign the .venv"
-	@.venv/bin/ipython 
+	@.venv/bin/ipython
 
 lint:
 	@.venv/bin/pflake8
 
+fmt:
+	@.venv/bin/isort dundie tests integration
+	@.venv/bin/black dundie tests integration
+
 test:
-	@.venv/bin/pytest -vv -s  
+	@.venv/bin/pytest -vv -s
 
 testci:
 	@.venv/bin/pytest -v --junitxml=test-result.xml
 
 watch:
-	# @.venv/bin/ptw -- -vv -s 
+	# @.venv/bin/ptw -- -vv -s
 	# também pode ser feito da maneira abaixo
 	@ls **/*.py | entr pytest
 
