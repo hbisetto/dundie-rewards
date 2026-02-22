@@ -19,7 +19,6 @@ def test_load_positive_call_load_command():
     assert "Dunder Mifflin Associates" in out.output
 
 
-
 @pytest.mark.integration
 @pytest.mark.medium
 @pytest.mark.parametrize("wrong_command", ["loady", "carrega", "start"])
