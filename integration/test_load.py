@@ -1,3 +1,5 @@
+from subprocess import CalledProcessError, check_output
+
 import pytest
 from click.testing import CliRunner
 
@@ -15,6 +17,7 @@ def test_load_positive_call_load_command():
     out = cmd.invoke(load, PEOPLE_FILE)
 
     assert "Dunder Mifflin Associates" in out.output
+
 
 
 @pytest.mark.integration
