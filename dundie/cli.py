@@ -15,7 +15,12 @@ def main():
         choices=("load", "show", "send"),
         default=help,
     )
-    parser.add_argument("filepath", type=str, help="File path to load", default=None)  # noqa
+    parser.add_argument(
+        "filepath",
+        type=str,
+        help="File path to load",
+        default=None,
+    )
 
     args = parser.parse_args()
 
