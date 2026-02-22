@@ -1,6 +1,6 @@
 import argparse
 
-# from dundie.core import load  # funcionaria como from .core import load
+from dundie.core import load  # noqa
 
 
 def main():
@@ -15,9 +15,7 @@ def main():
         choices=("load", "show", "send"),
         default=help,
     )
-    parser.add_argument(
-        "filepath", type=str, help="File path to load", default=None
-    )
+    parser.add_argument("filepath", type=str, help="File path to load", default=None)  # noqa
 
     args = parser.parse_args()
 
