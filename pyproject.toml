@@ -3,9 +3,6 @@
 minversion = "6.0"
 addopts = ["-ra", "-q", "-vv"]
 testpaths = ["tests","integration"]
-filterwarnings = [
-    "ignore::collateral.PendingDeprecationWarning",
-]
 
 [tool.flake8]
 exclude= [".venv", "build"]
